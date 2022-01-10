@@ -1,11 +1,11 @@
+
 let time = new Date();
 
 let hora = time.getHours();
 let dia = time.getDate();
-let mes = time.getMonth();
-let diaSemana = time.getDay();
+let mes = time.getMonth()+1;
 
-let currentMes = mes;
+let currentMes = 12;
 
 //  console.log(hora);
 //  console.log(dia);
@@ -25,61 +25,62 @@ let currentMes = mes;
 
 let menuUno,menuDos,menuTres,menuCuatro,menuCinco,menuSeis,menuSiete;
 
-menuUno = [24,4,13];
-menuDos = [27,5,14];
-menuTres = [28,6,17];
-menuCuatro = [29,7,18];
-menuCinco = [21,30,10,19];
-menuSeis = [22,31,11,20];
-menuSiete = [23,3,12,21];
+menuUno = [4,10];
+menuDos = [5,11];
+menuTres = [6];
+menuCuatro = [7];
+menuCinco = [10];
+menuSeis = [11];
+menuSiete = [3,12];
 
 var m4= document.getElementById('m4');
 
-if(menuUno.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
+if(menuUno.includes(dia) && mes === currentMes && (hora >= 8 && hora <=17)){
   console.log("menu 1")
   document.addEventListener("DOMContentLoaded", function show(){
-var m1 = document.getElementById("m1");
+
 document.getElementById('m1').style.display = 'block'; 
 });
 
-}else if (menuDos.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
+}else if (menuDos.includes(dia) && mes === currentMes && (hora >= 8 && hora <=17)){
   console.log("menu 2")
   document.addEventListener("DOMContentLoaded", function show(){
-var m2 = document.getElementById("m2");
+
 document.getElementById('m2').style.display = 'block'; 
 });
-}else if (menuTres.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
+}else if (menuTres.includes(dia) && mes === currentMes && (hora >= 8 && hora <=17)){
   console.log("menu 3")
   document.addEventListener("DOMContentLoaded", function show(){
-var m3 = document.getElementById("m3");
+
 document.getElementById('m3').style.display = 'block'; 
 });
-}else if(menuCuatro.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
-
+}else if(menuCuatro.includes(dia) && mes === currentMes && (hora >= 8 && hora <=17)){
+    console.log("menu 4")
 document.addEventListener("DOMContentLoaded", function show(){
-var m4 = document.getElementById("m4");
+
 document.getElementById('m4').style.display = 'block'; 
 });
-}else if (menuCinco.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
+}else if (menuCinco.includes(dia) && mes === currentMes && (hora >= 8 && hora <=17)){
+    console.log("menu 5")
   document.addEventListener("DOMContentLoaded", function show(){
-var m5 = document.getElementById("m5");
+
 document.getElementById('m5').style.display = 'block'; 
 });
-}else if (menuSeis.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
+}else if ((menuSeis.includes(dia)) && (mes === currentMes) && (hora >= 8 && hora <=17)){
+    console.log("menu 6")
   document.addEventListener("DOMContentLoaded", function show(){
-var m6 = document.getElementById("m6");
+
 document.getElementById('m6').style.display = 'block'; 
 });
-}else if (menuSiete.includes(dia) && mes == currentMes && (hora >= 8 && hora <=17)){
+}else if (menuSiete.includes(dia) && mes === currentMes && (hora >= 8 && hora <=17)){
+    console.log("menu 7")
   document.addEventListener("DOMContentLoaded", function show(){
-var m7 = document.getElementById("m7");
+
 document.getElementById('m7').style.display = 'block'; 
 });
 }else{
   document.addEventListener("DOMContentLoaded", function show(){
-var m8 = document.getElementById("m8");
+    console.log("menu 8")
+
 document.getElementById('m8').style.display = 'block';
 });}
-
-
-
